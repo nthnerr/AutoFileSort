@@ -1,6 +1,6 @@
 # AutoFileSort
 
-**AutoFileSort** is a lightweight automation tool designed to keep your workspace clean. It monitors specific folders (like your Downloads or Desktop) and instantly moves incoming files into organized subfolders based on their file extensions.
+**AutoFileSort** is a lightweight Python automation tool that keeps your folders organized. It monitors or scans a target directory and instantly moves files into categorized subfolders based on their extensions.
 
 [Download Latest Release](https://github.com/nthnerr/AutoFileSort/releases)
 
@@ -8,28 +8,27 @@
 
 ## Why use AutoFileSort?
 
-* **No More Manual Sorting:** Stop spending time dragging files into folders. Let the script handle it the second a file is saved.
-* **Instant Organization:** Replaces the messy "Downloads" folder with a structured system (e.g., .pdf goes to Documents, .jpg goes to Images).
-* **Set and Forget:** Runs in the background so your desktop stays clean without any manual effort.
-* **Customizable Logic:** Easily define which file types go to which destination.
+* **No Manual Sorting:** Instantly categorizes files into folders like *Images, Videos, Music, and Documents*.
+* **Clean Workspaces:** Perfect for automatically managing cluttered Downloads folders or Desktop environments.
+* **Efficient Logic:** Uses a precise extension-to-folder mapping system to ensure files are never misplaced.
+* **Lightweight Performance:** Runs as a simple script without the overhead of complex file management software.
 
 ## Installation
 
-1. **Download** the latest version of AutoFileSort.
-2. **Configure** your directory paths in the provided config file to tell the script which folders to watch.
-3. **Run** the script to begin monitoring your files.
+1. **Download** the latest release from the link above.
+2. **Extract** the files to a location of your choice.
+3. **Configure** your target path within the script or configuration file to point to the folder you want to organize.
 
 ## How to Use
 
-1. Start the application.
-2. The system will enter **MONITORING** mode.
-3. Any file added to your "Watch" folder will be automatically moved to its designated category.
-4. Check the logs or status window to see real-time sorting activity.
+1. **Run** the script via your terminal or command prompt: `python sort.py`.
+2. The script will scan the designated folder.
+3. Your files will be moved into structured subdirectories (e.g., `.jpg` to `/Images`, `.pdf` to `/Documents`) immediately.
 
 ## Technical Specs
-* **Logic:** Extension-based sorting (Regex/String matching).
-* **Performance:** Low-latency file system monitoring.
-* **Platform:** Optimized for Windows and macOS.
+* **Language:** Python 3.x
+* **Core Logic:** `os` and `shutil` based file movement.
+* **Platform:** Compatible with Windows, macOS, and Linux.
 
 ---
 *Created by [nthnerr](https://github.com/nthnerr)*
