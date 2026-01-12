@@ -1,71 +1,35 @@
 # AutoFileSort
 
-AutoFileSort is a simple yet powerful Python tool designed to help you declutter your directories by automatically organizing files based on their extensions. Whether you're a student, a professional, or just someone looking to keep your files tidy, AutoFileSort has you covered!
+**AutoFileSort** is a lightweight automation tool designed to keep your workspace clean. It monitors specific folders (like your Downloads or Desktop) and instantly moves incoming files into organized subfolders based on their file extensions.
+
+[Download Latest Release](https://github.com/nthnerr/AutoFileSort/releases)
 
 ---
+
+## Why use AutoFileSort?
+
+* **No More Manual Sorting:** Stop spending time dragging files into folders. Let the script handle it the second a file is saved.
+* **Instant Organization:** Replaces the messy "Downloads" folder with a structured system (e.g., .pdf goes to Documents, .jpg goes to Images).
+* **Set and Forget:** Runs in the background so your desktop stays clean without any manual effort.
+* **Customizable Logic:** Easily define which file types go to which destination.
 
 ## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/AutoFileSort.git
-   ```
-2. Ensure [Python 3.5+](https://www.python.org/downloads/) is installed on your system. No external libraries required!
+
+1. **Download** the latest version of AutoFileSort.
+2. **Configure** your directory paths in the provided config file to tell the script which folders to watch.
+3. **Run** the script to begin monitoring your files.
+
+## How to Use
+
+1. Start the application.
+2. The system will enter **MONITORING** mode.
+3. Any file added to your "Watch" folder will be automatically moved to its designated category.
+4. Check the logs or status window to see real-time sorting activity.
+
+## Technical Specs
+* **Logic:** Extension-based sorting (Regex/String matching).
+* **Performance:** Low-latency file system monitoring.
+* **Platform:** Optimized for Windows and macOS.
 
 ---
-
-## Usage
-1. Run the program:
-   ```bash
-   python AutoFileSort.py
-   ```
-
-   For using custom `config.json` files:
-   ```bash
-   python AutoFileSort.py -c config.json
-   ```
-2. Enter the path to the directory you wish to organize when prompted.
-3. Files will be sorted into an `output` folder, categorized into subfolders based on their type.
-4. Check the generated log file for a summary of all file movements.
-
----
-
-## How It Works
-1. **Input Validation**: Ensures the provided directory exists and can be accessed.
-2. **File Categorization**: Matches file extensions to categories defined in `config.json` or follows the default configuration.
-3. **Output Structure**: Creates categorized folders dynamically within the `output` directory.
-4. **Logging and Feedback**: Logs each file movement and provides real-time updates in the terminal.
-5. **Permission and Error Handling**: Ensures that files can be accessed and moved, with error details logged if issues arise.
-
----
-
-## Example
-### Input Directory:
-```
-/path/to/input/directory/
-```
-### Output Directory:
-```
-output/
-    documents/
-        report.pdf
-    images/
-        photo.jpg
-    audio/
-        song.mp3
-    unsorted/
-        unknown_file.xyz
-```
-
----
-
-## What's New in v1.2
-- **Improved Logging**: Log files now include a header with the start date/time and detailed summaries of each file movement.
-- **File Permissions Check**: Ensures files can be read/written before moving them, preventing access errors.
-- **Directory Structure Preservation**: Optionally preserve the directory structure when sorting files into categories.
-- **File Type Summary**: Display a summary of the number of files sorted into each category, included in the log.
-- **Error Handling Improvements**: Provide more informative error messages during file operations.
-
----
-
-## License
-AutoFileSort is open-source and available under the [MIT License](LICENSE.txt).
+*Created by [nthnerr](https://github.com/nthnerr)*
